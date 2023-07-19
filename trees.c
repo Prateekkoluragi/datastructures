@@ -29,7 +29,7 @@ struct Node* insertNode(struct Node* root, int data) {
     return root;
 }
 
-void storePreOrder(struct Node* root, FILE* file) {
+/*void storePreOrder(struct Node* root, FILE* file) {
     if (root == NULL) {
         return;
     }
@@ -54,7 +54,7 @@ void storePostOrder(struct Node* root, FILE* file) {
     storePostOrder(root->left, file);
     storePostOrder(root->right, file);
     fprintf(file, "%d ", root->data);
-}
+}*/
 
 int main() {
     struct Node* root = NULL;
@@ -82,7 +82,7 @@ int main() {
     fclose(randomNumberFile);
     printf("Random numbers stored in random_numbers.txt\n");
 
-    FILE* preOrderFile = fopen("preorder.txt", "w");
+    /*FILE* preOrderFile = fopen("preorder.txt", "w");
     if (preOrderFile == NULL) {
         printf("Failed to open preorder.txt\n");
         return 1;
@@ -119,7 +119,7 @@ int main() {
     fclose(postOrderFile);
     cpu_time_used = ((double)(end - start)) / (CLOCKS_PER_SEC / 1000);
     printf("Post-order traversal stored in postorder.txt\n");
-    printf("Time taken for post-order traversal: %.2f ms\n", cpu_time_used);
+    printf("Time taken for post-order traversal: %.2f ms\n", cpu_time_used);*/
 
     return 0;
 }
